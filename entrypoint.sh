@@ -2,6 +2,8 @@
 
 set -ex
 
+# Remove lingering GPG lock file
+# Otherwise DB will stay locked when running entrypoint.sh multiple times
 rm -f /root/.gnupg/public-keys.d/pubring.db.lock
 
 # Initialize
