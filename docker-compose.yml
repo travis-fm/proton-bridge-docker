@@ -1,0 +1,12 @@
+services:
+  proton-bridge:
+    image: ghcr.io/travis-fm/proton-bridge:latest
+    ports:
+      - 1025:25/tcp
+      - 1143:143/tcp
+    restart: unless-stopped
+    volumes:
+      - proton-bridge:/root
+volumes:
+  proton-bridge:
+    name: proton-bridge
