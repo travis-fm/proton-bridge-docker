@@ -48,7 +48,7 @@ jobs:
     if: ${{ !needs.get-bridge-release.outputs.release_exists }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Switch git submodule to latest release
         run: |
